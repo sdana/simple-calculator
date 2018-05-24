@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <input id="firstInput" type="text"> <input id="secondInput" type="text">
-    <br>
-    <button id="add">+</button><button id="sub">-</button><button id="mult">x</button><button id="div">/</button>
-    <br>
-    <button id="clear">Clear</button>
+    <div class="calculator-container"></div>
+        <div class="calc">
+            <input id="firstInput" type="text"> <input id="secondInput" type="text">
+            <br>
+            <button id="add">+</button><button id="sub">-</button><button id="mult">x</button><button id="div">/</button><button id="mod">%</button>
+            <br>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
     <div id="result"></div>
-    <script src="main.js"></script>
+
+    <script src="main.js"></script>   
 </body>
 </html>

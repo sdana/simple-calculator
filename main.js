@@ -3,18 +3,21 @@ let addButton = document.querySelector("#add")
 let subButton = document.querySelector("#sub")
 let multButton = document.querySelector("#mult")
 let divButton = document.querySelector("#div")
+let modButton = document.querySelector("#mod")
 let resultDiv = document.getElementById("result")
 let clearButton = document.getElementById("clear")
 
 //Add event listeners for buttons
-addButton.addEventListener("click", function(){doMath("+")})
-subButton.addEventListener("click", function(){doMath("-")})
-multButton.addEventListener("click", function(){doMath("*")})
-divButton.addEventListener("click", function(){doMath("/")})
+// addButton.addEventListener("click", function(){doMath("+")})
+addButton.addEventListener("click", () => { doMath("+") })
+subButton.addEventListener("click", () => {doMath("-")})
+multButton.addEventListener("click", () =>{doMath("*")})
+divButton.addEventListener("click", () => {doMath("/")})
+modButton.addEventListener("click", () => { doMath("%") })
 clearButton.addEventListener("click", clearResult)
 
 //function to perform math on inputs
-function doMath(operator) {
+const doMath = (operator) => {
     //Grab the values from both text fields
     let firstNumber = document.querySelector("#firstInput").value
     let secondNumber = document.querySelector("#secondInput").value
@@ -28,7 +31,7 @@ function doMath(operator) {
 }
 
 //function to clear result object from DOM and clear input fields
-function clearResult() {
+const clearResult = () => {
     //remove result object from DOM
     resultDiv.removeChild(resultDiv.firstChild)
     //grab input fields from DOM
