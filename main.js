@@ -7,15 +7,6 @@ let modButton = document.querySelector("#mod")
 let resultDiv = document.getElementById("result")
 let clearButton = document.getElementById("clear")
 
-//Add event listeners for buttons
-// addButton.addEventListener("click", function(){doMath("+")})
-addButton.addEventListener("click", () => { doMath("+") })
-subButton.addEventListener("click", () => {doMath("-")})
-multButton.addEventListener("click", () =>{doMath("*")})
-divButton.addEventListener("click", () => {doMath("/")})
-modButton.addEventListener("click", () => { doMath("%") })
-clearButton.addEventListener("click", clearResult)
-
 //function to perform math on inputs
 const doMath = (operator) => {
     //Grab the values from both text fields
@@ -41,3 +32,12 @@ const clearResult = () => {
     input1.value = ""
     input2.value = ""
 }
+
+//Add event listeners for buttons
+// addButton.addEventListener("click", function(){doMath("+")})
+addButton.addEventListener("click", () => { doMath("+") })
+subButton.addEventListener("click", () => {doMath("-")})
+multButton.addEventListener("click", () =>{doMath("*")})
+divButton.addEventListener("click", () => {doMath("/")})
+modButton.addEventListener("click", () => { doMath("%") })
+clearButton.addEventListener("click", clearResult)
